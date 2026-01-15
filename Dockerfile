@@ -6,6 +6,7 @@ RUN comfy node install --exit-on-fail comfyui-logicutils@1.7.2 --mode remote
 
 RUN git clone https://github.com/1038lab/ComfyUI-MiniMax-Remover /comfyui/custom_nodes/ComfyUI-MiniMax-Remover
 
+RUN pip install -r /comfyui/custom_nodes/ComfyUI-MiniMax-Remover/requirements.txt
 # download models into comfyui
 
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
