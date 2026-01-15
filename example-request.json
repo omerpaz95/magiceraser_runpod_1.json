@@ -1,0 +1,88 @@
+{
+  "input": {
+    "workflow": {
+      "18": {
+        "inputs": {
+          "value": 12,
+          "image": [
+            "22",
+            0
+          ],
+          "mask": [
+            "20",
+            0
+          ],
+          "vae": [
+            "19",
+            0
+          ],
+          "transformer": [
+            "19",
+            1
+          ],
+          "scheduler": [
+            "19",
+            2
+          ]
+        },
+        "class_type": "MinimaxImageRemover",
+        "_meta": {
+          "title": "MinimaxImageRemover"
+        }
+      },
+      "19": {
+        "inputs": {
+          "text": "Auto"
+        },
+        "class_type": "MinimaxModelLoader",
+        "_meta": {
+          "title": "MinimaxModelLoader"
+        }
+      },
+      "20": {
+        "inputs": {
+          "text": "red",
+          "image": [
+            "21",
+            0
+          ]
+        },
+        "class_type": "ImageToMask",
+        "_meta": {
+          "title": "ImageToMask"
+        }
+      },
+      "21": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "ImageFromURLNode",
+        "_meta": {
+          "title": "ImageFromURLNode"
+        }
+      },
+      "22": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "ImageFromURLNode",
+        "_meta": {
+          "title": "ImageFromURLNode"
+        }
+      },
+      "23": {
+        "inputs": {
+          "filename_prefix": "Eraser_",
+          "images": [
+            "18",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "SaveImage"
+        }
+      }
+    }
+  }
+}
